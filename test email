@@ -1,0 +1,26 @@
+<?php
+// Define the recipient email address
+$to = "salmadbab46@gmail.com";
+
+// Define the email subject
+$subject = "Subject of Your Email";
+
+// Compose the email message
+$message = "Hello,\n\nThis YOUR ACOUNT HAS BEE HACKED click this link to verify your iddentity.";
+
+// Define the sender's email and name
+$senderEmail = "contact@cihbank.ma";
+$senderName = "CIHbank";
+
+// Set the email headers with the sender's name and email
+$headers = "From: " . $senderName . " <" . $senderEmail . ">\r\n";
+$headers .= "Reply-To: " . $senderEmail . "\r\n";
+$headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+
+// Send the email
+if (mail($to, $subject, $message, $headers)) {
+    echo "Email sent successfully!";
+} else {
+    echo "Failed to send email.";
+}
+?>
